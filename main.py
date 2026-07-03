@@ -9,9 +9,15 @@ def main():
     # check for file argument
     if len(sys.argv) < 2:
         console.print("[#f15f49]error[/]: no file argument")
-        console.print("usage: [#0080ff]mp <file>[/]")
+        console.print("usage: [#6272a4]mp [#0080ff]<file>[/][/]")
         sys.exit(1)
     filename = sys.argv[1]
+
+    # handle help args
+    if filename in ["--help", "-h"]:
+        console.print("[#0080ff]md[/]. [#6272a4]a simple markdown viewer[/].")
+        console.print("usage: [#6272a4]mp <file>[/]")
+        sys.exit(0)
 
     # read file contents
     try:
