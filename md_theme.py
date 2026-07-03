@@ -10,7 +10,7 @@ from rich.style import Style
 MD_FG          = "#f8f8f2"   # foreground / document text
 MD_BG          = "#282a36"   # background
 MD_COMMENT     = "#6272a4"   # comments, dim text
-MD_BLUE        = "#0080ff"   # links, enumerations, names
+MD_BLUE        = "#00a0ff"   # links, enumerations, names
 MD_GREEN       = "#50fa7b"   # code, functions, decorators
 MD_ORANGE      = "#ef9d6e"   # strong/bold, code blocks
 MD_PINK        = "#ff79c6"   # link text, keywords, tags
@@ -55,10 +55,10 @@ md_theme = Theme({
 
     # ── Inline styles ──
     "markdown.em":              Style(color=MD_YELLOW, italic=True),   # *italic*
-    "markdown.strong":          Style(color=MD_ORANGE, bold=True),      # **bold**
-    "markdown.code":            Style(color=MD_GREEN),                  # `inline code`
-    "markdown.code_block":      Style(color=MD_ORANGE),                  # code blocks
-    "markdown.s":               Style(strike=True),                          # ~~strikethrough~~
+    "markdown.strong":          Style(color=MD_ORANGE, bold=True),     # **bold**
+    "markdown.code":            Style(color=MD_GREEN),                 # `inline code`
+    "markdown.code_block":      Style(color=MD_ORANGE),                # code blocks
+    "markdown.s":               Style(strike=True),                    # ~~strikethrough~~
 
     # ── Block quote ──
     "markdown.block_quote":     Style(color=MD_YELLOW, italic=True),
@@ -127,12 +127,12 @@ class MDStyle(PygmentsStyle):
         Name.Other:         MD_FG,
 
         # ── Literals ──
-        Literal:            "",
-        Literal.Number:     MD_GREEN_CYAN,
-        Literal.String:     MD_YELLOW,
-        Literal.String.Escape: MD_PINK,
+        Literal:                "",
+        Literal.Number:         MD_GREEN_CYAN,
+        Literal.String:         MD_YELLOW,
+        Literal.String.Escape:  MD_PINK,
         Literal.Number.Integer: MD_GREEN_CYAN,
-        Literal.Number.Float: MD_GREEN_CYAN,
+        Literal.Number.Float:   MD_GREEN_CYAN,
 
         # ── Generic ──
         Generic.Deleted:    MD_RED,
