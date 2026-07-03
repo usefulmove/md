@@ -1,8 +1,9 @@
+from dracula_theme import dracula_theme
 from rich.markdown import Markdown
 from rich.console import Console
 import sys
 
-console = Console()
+console = Console(theme=dracula_theme)
 
 def main():
     # check for file argument
@@ -16,7 +17,7 @@ def main():
         with open(filename) as file:
             contents = file.read()
     except FileNotFoundError:
-        console.print(f"[red]error[/]: [dim]{filename}[/] not found")
+        console.print(f"[red]error[/]: [#0080ff]{filename}[/] not found")
         sys.exit(1)
 
     # display as rendered markdown in console pager
