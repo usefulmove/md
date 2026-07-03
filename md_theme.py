@@ -7,7 +7,7 @@ from rich.style import Style
 
 # ── md color constants ──────────────────────────────────────────
 
-MD_FG          = "#f8f8f2"   # foreground / document text
+MD_FG          = "#faf6e4"   # foreground / document text
 MD_BG          = "#121420"   # background
 MD_COMMENT     = "#6272a4"   # comments, dim text
 MD_BLUE        = "#0080ff"   # links, enumerations, names
