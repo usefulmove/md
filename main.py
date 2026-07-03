@@ -1,9 +1,9 @@
-from dracula_theme import dracula_theme
+from md_theme import md_theme
 from rich.markdown import Markdown
 from rich.console import Console
 import sys
 
-console = Console(theme=dracula_theme)
+console = Console(theme=md_theme)
 
 def main():
     # check for file argument
