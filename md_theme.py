@@ -10,7 +10,7 @@ from rich.style import Style
 MD_FG          = "#f8f8f2"   # foreground / document text
 MD_BG          = "#121420"   # background
 MD_COMMENT     = "#6272a4"   # comments, dim text
-MD_BLUE        = "#00a0ff"   # links, enumerations, names
+MD_BLUE        = "#0080ff"   # links, enumerations, names
 MD_GREEN       = "#50fa7b"   # code, functions, decorators
 MD_ORANGE      = "#ef9d6e"   # strong/bold, code blocks
 MD_PINK        = "#ff79c6"   # link text, keywords, tags
@@ -54,7 +54,7 @@ md_theme = Theme({
     "markdown.h1.border":       Style(color=MD_PURPLE),
 
     # ── Inline styles ──
-    "markdown.em":              Style(color=MD_YELLOW, italic=True),   # *italic*
+    "markdown.em":              Style(color=MD_ORANGE, italic=True),   # *italic*
     "markdown.strong":          Style(color=MD_ORANGE, bold=True),     # **bold**
     "markdown.code":            Style(color=MD_GREEN),                 # `inline code`
     "markdown.code_block":      Style(color=MD_ORANGE),                # code blocks
@@ -103,21 +103,21 @@ class MDStyle(PygmentsStyle):
         Comment.Preproc:    MD_PINK,
 
         # ── Keywords ──
-        Keyword:            MD_PINK,
-        Keyword.Constant:   MD_PINK,
+        Keyword:             MD_PINK,
+        Keyword.Constant:    MD_PINK,
         Keyword.Declaration: MD_PINK,
-        Keyword.Namespace:  MD_PINK,
-        Keyword.Type:       MD_BLUE,
-        Keyword.Reserved:   MD_PINK,
+        Keyword.Namespace:   MD_PINK,
+        Keyword.Type:        MD_PINK,
+        Keyword.Reserved:    MD_PINK,
 
         # ── Operators / Punctuation ──
         Operator:           MD_PINK,
         Operator.Word:      MD_PINK,
-        Punctuation:        MD_FG,
+        Punctuation:        MD_COMMENT,
 
         # ── Names ──
-        Name:               MD_BLUE,
-        Name.Builtin:       MD_BLUE,
+        Name:               MD_FG,
+        Name.Builtin:       MD_PURPLE,
         Name.Function:      MD_GREEN,
         Name.Class:         MD_BLUE,
         Name.Constant:      MD_PURPLE,
@@ -129,7 +129,7 @@ class MDStyle(PygmentsStyle):
         # ── Literals ──
         Literal:                "",
         Literal.Number:         MD_GREEN_CYAN,
-        Literal.String:         MD_YELLOW,
+        Literal.String:         MD_ORANGE,
         Literal.String.Escape:  MD_PINK,
         Literal.Number.Integer: MD_GREEN_CYAN,
         Literal.Number.Float:   MD_GREEN_CYAN,
@@ -140,7 +140,7 @@ class MDStyle(PygmentsStyle):
         Generic.Heading:    f"bold {MD_PURPLE}",
         Generic.Subheading: MD_PURPLE,
         Generic.Error:      MD_RED,
-        Generic.Emph:       f"italic {MD_YELLOW}",
+        Generic.Emph:       f"italic {MD_ORANGE}",
         Generic.Strong:     f"bold {MD_ORANGE}",
 
         # ── Error ──
