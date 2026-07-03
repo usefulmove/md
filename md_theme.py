@@ -8,7 +8,7 @@ from rich.style import Style
 # ── md color constants ──────────────────────────────────────────
 
 MD_FG          = "#f8f8f2"   # foreground / document text
-MD_BG          = "#282a36"   # background
+MD_BG          = "#121420"   # background
 MD_COMMENT     = "#6272a4"   # comments, dim text
 MD_BLUE        = "#00a0ff"   # links, enumerations, names
 MD_GREEN       = "#50fa7b"   # code, functions, decorators
@@ -152,9 +152,9 @@ class MDStyle(PygmentsStyle):
 
 # ── Register the custom Pygments style so Rich can find it by name ──
 
-from pygments.styles import STYLE_MAP
+from pygments.styles import _STYLE_NAME_TO_MODULE_MAP
 
-STYLE_MAP["md"] = MDStyle
+_STYLE_NAME_TO_MODULE_MAP["md"] = ("md_theme", "MDStyle")
 
 
 # ── Usage ────────────────────────────────────────────────────────────

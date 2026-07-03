@@ -22,7 +22,7 @@ def main():
 
     # display as rendered markdown in console pager
     with console.pager(styles=True):
-        console.print(Markdown(contents))
+        console.print(Markdown(contents, code_theme="md"))
 
 if __name__ == "__main__":
     main()
