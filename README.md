@@ -1,4 +1,4 @@
-# markdown
+# md markdown
 
 A simple terminal markdown viewer. It renders markdown files in your console pager with syntax-highlighted code blocks, styled headings, lists, tables, links, and more.
 
