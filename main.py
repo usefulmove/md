@@ -40,12 +40,12 @@ def main():
         sys.exit(1)
 
     # display as rendered markdown in console pager
-    def wrap_code(code, lang):
-        return f"```{lang}\n\n{code}\n\n```"
+    def code_block(code, lang):
+        return f"# {filename}\n```{lang}\n\n{code}\n\n```"
 
     with console.pager(styles=True):
         console.print(Markdown(
-            contents if not code_flag else wrap_code(contents, code_flag),
+            contents if not code_flag else code_block(contents, code_flag),
             code_theme="md"
         ))
 
