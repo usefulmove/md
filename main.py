@@ -41,7 +41,7 @@ def main():
 
     # display as rendered markdown in console pager
     def code_block(code, lang):
-        return f"# {filename}\n```{lang}\n\n{code}\n\n```"
+        return f"# {filename}\n```{lang}\n{code}\n\n```"
 
     with console.pager(styles=True):
         console.print(Markdown(
