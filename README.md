@@ -1,12 +1,12 @@
-# md
+# markdown
 
-A simple terminal Markdown viewer. It renders Markdown files in your console pager with syntax-highlighted code blocks, styled headings, lists, tables, links, and more.
+A simple terminal markdown viewer. It renders markdown files in your console pager with syntax-highlighted code blocks, styled headings, lists, tables, links, and more.
 
 ## Features
 
-- **Pager output** — rendered Markdown opens in your system pager (e.g. `less`) with full color support
+- **Pager output** — rendered markdown opens in your system pager (e.g. `less`) with full color support
 - **Syntax highlighting** — code blocks are highlighted with a custom Pygments style
-- **Zero config** — just pass a Markdown file and go
+- **Zero config** — just pass a markdown file and go
 
 ## Installation
 
