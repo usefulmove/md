@@ -5,6 +5,7 @@ import sys
 
 console = Console(theme=md_theme)
 
+
 def main():
     # check for file argument
     if len(sys.argv) < 2:
@@ -23,7 +24,7 @@ def main():
     # handle code flags
     filename = arg
     code_flag = ""
-    if arg.startswith("--"): # if code flag is present
+    if arg.startswith("--"):  # if code flag is present
         code_flag = arg[2:]
         if len(sys.argv) < 3:
             console.print("[#f15f49]error[/]: no file argument after code flag")
@@ -44,10 +45,13 @@ def main():
         return f"# {filename}\n```{lang}\n{code}\n\n```"
 
     with console.pager(styles=True):
-        console.print(Markdown(
-            contents if not code_flag else code_block(contents, code_flag),
-            code_theme="md"
-        ))
+        console.print(
+            Markdown(
+                contents if not code_flag else code_block(contents, code_flag),
+                code_theme="md",
+            )
+        )
+
 
 if __name__ == "__main__":
     main()
