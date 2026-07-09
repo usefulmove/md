@@ -6,7 +6,7 @@ import sys
 console = Console(theme=md_theme)
 
 
-def main():
+def main() -> None:
     # check for file argument
     if len(sys.argv) < 2:
         console.print("[#f15f49]error[/]: no file argument")
@@ -41,7 +41,7 @@ def main():
         sys.exit(1)
 
     # display as rendered markdown in console pager
-    def code_block(code, lang):
+    def code_block(code: str, lang: str) -> None:
         return f"# {filename}\n```{lang}\n{code}\n\n```"
 
     with console.pager(styles=True):
